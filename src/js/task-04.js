@@ -11,6 +11,6 @@ submit.addEventListener("submit", (event) => {
         data.email = event.target.elements.email.value.trim();
         data.password = event.target.elements.password.value.trim();
         console.log(data);
+        submit.reset();
     }
-    submit.reset();
 });

@@ -18,11 +18,13 @@ const createBoxes = (amount) => {
         boxes.lastChild.remove();
     }
     if (amount >= 1 && amount <= 100) {
+        let cubes = "";
         for (let index = 0; index < amount; index++) {
-            boxes.insertAdjacentHTML("beforeend", `<div class="box"; style="height: ${height}px; width: ${width}px; background-color: ${getRandomHexColor()};"></div>`);
+            cubes += `<div class="box"; style="height: ${height}px; width: ${width}px; background-color: ${getRandomHexColor()};"></div>`;
             height += 10;
             width += 10;
         }
+        boxes.insertAdjacentHTML("beforeend", cubes);
         height = 30;
         width = 30;
     }
